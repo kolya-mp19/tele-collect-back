@@ -16,5 +16,6 @@
   },
   "cSpell.language": "ru,en,en-GB,en-US,ru-RU",
   "cSpell.enabled": true,
-  "jest.enable": false
+  "jest.enable": false,
+  "cSpell.words": ["typeorm"]
 }
