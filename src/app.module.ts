@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { DevtoolsModule } from '@nestjs/devtools-integration';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module';
+import { RestModule } from './rest/rest.module';
 
 @Module({
   imports: [
@@ -20,8 +20,10 @@ import { DevtoolsModule } from '@nestjs/devtools-integration';
       // http: process.env.NODE_ENV !== 'production',
       http: true,
     }),
+    UsersModule,
+    RestModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
